@@ -1,0 +1,19 @@
+less
+more
+Otros filtros.
+    awk y gawk cada uno corresponde un lenguaje de programación creado para procesar flujos de texto.
+    ed y sed correepsonde a un editor de textos que se opera desde la línea de comandos usando expresiones de vi/vim.
+    expand convierte tabuladores en espacios.
+    unexpand convierte múltiples espacios en tabuladores.
+    tr extrae caracteres específicos de un texto.
+    La familia grep.
+    od transforma un archivo en octales.
+    hexdump regresa un archivo en formato hexadecimal.
+Filtros de formato.
+    troff y groff Es un lenguaje de type setting para UNIX.
+    pr es un filtro que formatea texto para ser impreso.
+    fmt es un componenten que permite convertir flujhos de texto en un tipo de archivo especifico.
+    fold es un comando que permite formatear el ancho de un documento.
+
+    
+

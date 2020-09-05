@@ -1,0 +1,39 @@
+SysAdmin
+    1. Respaldo
+    2. Consola
+        Mientras no entre en conflicto con anteriores
+    3. Estudio
+        Mientras no entre en conflicto con nada anterior
+    Siempre realizar un respaldo
+        Que respaldar?
+        Como respaldar?
+        Frecuencia?
+        *Almacenamiento definido por software
+        Tener presente:
+            GlusterFS glusterfs.org
+            Ceph ceph.com
+    Consola
+        Scripts
+        Comandos
+        Editar archivos de texto
+        Manejar expresiones regulares
+        Usar man
+        --help
+        Mirar la documentacion del comando
+        Usar google en ultimo caso
+    Estudio
+        Estudiar siempre que esto sea posible y no
+        evite que hagas lo anterior
+        Trabaja más inteligentemente, no más fuerte
+    Automatizar tus propias tares
+Respira
+Relajate
+Acepta y aprende
+Comprometete
+Respeta tus horarios
+Descansa
+Se tu fan #1
+Se tan bueno como Mikey cree que eres
+    Ver Cacti
+    Ver Zabbix
+    Ver Xymon

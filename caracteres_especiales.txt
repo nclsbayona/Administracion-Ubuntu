@@ -1,0 +1,19 @@
+"-" caracter especial para opciones
+" "caracter especial para separar
+\ para escapar el especial
+"*" uno o más caracteres
+Ej: ls "*"
+ls "m*"
+"?" un caracter
+"[]" agrupar y rangos
+"" o '' para escapar tambien
+">" y "<" redireccionar salida de comandos
+";" separar comandos, secuencialmente
+"&" comando en segundo plano
+"&&" ejecuta el segundo cuando acaba el primero, si ocurre un error no se ejecuta el segundo
+"|" salida del comando es recibida por el comando 2
+"||" se ejecuta el segundo si falla el primero
+"~" directorio de usuario
+"`" comando para redireccionar salida
+"$" variables y comandos
+"!" acceder al historial

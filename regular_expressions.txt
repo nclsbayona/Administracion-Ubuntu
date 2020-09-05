@@ -1,0 +1,13 @@
+'^' Inicio de línea
+'$' Final de linea
+'.' Un carácter
+'[]' Agrupación o rangos
+*** Necesario agregar -E en grep o usar egrep
+'?' Cero o una vez
+'*' Cero o más veces
+'+' Una o más veces
+'{n}' n veces
+'{n|m}' Entre n y m veces
+'{n,}' Mínimo n veces
+'()' Agrupar
+'|' Alternancia

@@ -1,0 +1,449 @@
+pwd
+    print working directory
+whoami
+    username
+whatis "COMANDO"
+    Descripción COMANDO
+apropos TERMINO
+    Lista de comandos que incluyan TERMINO en su descripción
+whereis TERMINO
+    Ubicación de TERMINO en particular
+which COMANDO
+    Ubicación de COMANDO en particular
+hostname
+    servidor al que estamos conectados
+cd RUTA
+    Change directory (Default home)
+    Absoluta:
+        Comienza con / (Desde la raíz)
+    Relativa:
+        Subdirectorio del directorio donde estoy
+ls DIRECTORIO
+    List short. Muestra contenido del directorio (Sin ocultos)DIRECTORIO default donde estoy
+    ls -l DIRECTORIO
+        Muestra contenidos del directorio junto a sus permisos
+        Listado extendido.
+            La opción -l permite realizar un listado extendido de elementos que despliegan la siguiente información.
+            Ejemplo: -rw-r--r-- 1 oi oi 47177 May 28 14:08 img/cloudevel.png
+            La primera columna contiene una serie de caracteres que describen:
+                El tipo de elemento del que se trata.
+                    - para archivos comunes.
+                    d para directorios.
+                    l para enlaces.
+                Los permisos para el usuario propietario del elemento.
+                Los permisos para el grupo propietario del elemento.
+                Los permisos para el resto de los usuarios.
+            La segunda columna es un número que indica la cantidad de enlaces que tiene.
+            La tercera columna indica el nombre del usuario propietario del elemento.
+            La cuarta columna indica el nombre del grupo propietario del elemento.
+            La quinta columna indica el tamaño en bytes del archivo.
+            La sexta columna hasta la octava muestra la fecha del último acceso al elemento.
+            La novena columna muestra el nombre del elemento.
+        VER IMAGEN ls -l.png
+    ls -a DIRECTORIO
+        Muestra contenidos del directorio ocultos y no ocultos
+    ls -i DIRECTORIO
+        Muestra contenidos del directorio y su inode
+    ls -r DIRECTORIO
+        Muestra contenidos del directorio de forma inversa
+    ls -R DIRECTORIO
+        Muestra contenidos del directorio de forma recursiva
+    ls -lh DIRECTORIO
+        Muestra contenidos del directorio, con permisos y tamaño
+mkdir NOMBRE RUTA
+    Crea un directorio NOMBRE  en la ruta RUTA
+    mkdir -p NOMBRE RUTA
+        Crea un directorio NOMBRE en la ruta RUTA (Si no existe un directorio superior, lo crea)
+touch RUTA
+    Actualiza los datos de acceso a un archivo
+    touch -c RUTA
+        No crea ningun archivo si no existe
+cp RUTA1 RUTA2
+    Copia el fichero que se encuentra en RUTA1 y lo lleva a RUTA2    (Podría cambiarle el nombre)
+    cp -r RUTA1 RUTA2
+        Copia recursivamente RUTA1 a RUTA2
+    cp -u RUTA1 RUTA2
+        Copiar solo si el archivo de RUTA1 es mas reciente que RUTA2 o si este no existe
+    cp -v RUTA1 RUTA 2
+        Habilita el modo descriptivo
+    cp -i RUTA1 RUTA2
+        Habilita el modo interactivo
+    cp -f RUTA1 RUTA2
+        Fuerza la operación
+    cp -l RUTA1 RUTA2
+        Copia con un enlace duro
+    cp -s RUTA1 RUTA2
+        Copia con enlace simbólico
+mv RUTA1 RUTA2
+    Mover directorio de RUTA1 a RUTA2
+    mv -v RUTA1 RUTA 2
+        Habilita el modo descriptivo
+    mv -i RUTA1 RUTA2
+        Habilita el modo interactivo
+ln RUTA1 RUTA2
+    Crea un enlace entre la RUTA1 Y la RUTA2
+    ln -i RUTA1 RUTA2
+        Crea enlace duro entre RUTA1 y RUTA2
+        Nota: Los enlaces duros sólo se pueden realizar si las rutas se encuentran
+        en el mismo sistema de almacenamiento por bloques.
+    ln -s RUTA1 RUTA2
+        Crea enlace simbólico entre RUTA1 y RUTA2
+stat FICHERO
+    Despliega datos generales de un objeto
+file FICHERO
+    Retorna el tipo de archivo que se consulta
+tree FICHERO
+    Despliega en forma de árbol la estructura de un fichero
+du FICHERO
+    Tamaño de FICHERO
+    du -m FICHERO
+        Tamaño de FICHERO en MB
+history
+    historial que accede a los recientes y a .bash_history
+    Archivo .bash_history (~/.bash_history) Comandos que he hecho
+    history -w
+        Guarda en .bash_history
+   history -c Ocultar historial
+uname
+    Información del sistema
+    uname -s
+        Nucleo
+    uname -r
+        Version nucleo
+    uname -v
+        Version sistema operativo
+    uname -n
+        Nombre máquina = hostname
+    uname -m
+        Bits del núcleo
+    uname -a
+        Toda la información
+    uname -o
+        Operating system
+man
+    Ayuda
+    Sintaxis: man [seccion] comando
+    Secciones 1-8
+        1 Comandos generales
+        2 Llamadas al sistema
+        3 Biblioteca (funciones)
+        4 Ficheros especiales
+        5 Formato de fichero
+        6 Juegos y salvapantallas
+        7 Miscelanea
+        8 Administración del sistema
+echo MENSAJE
+    Envia un MENSAJE a la salida estándar
+    echo -e MENSAJE
+        Permite enviar caracteres especiales precedidos por '\'
+            \n corresponde a un retorno de línea.
+            \t corresponde a un tabulador.
+            \0<digito> corresponde a un caracter ASCII identificado mediante su número de código en octal.
+            \\ se usa para desplegar el caracter \.
+cat FICHERO
+    Mostrar contenido de un fichero (Si no se especifica un fichero, se captura de stdin)
+    cat -n FICHERO
+        Mostrar numeros de lineas aunque esten en blanco
+    cat -b FICHERO
+        Mostrar numeros de lineas que no estan en blanco
+tac FICHERO
+    Muestra el contenido del fichero al reves
+nl FICHERO
+Visualizar numerando lineas
+    nl -ba FICHERO
+        Numerar lineas vacias
+head FICHERO
+    Muestra el inicio de un fichero (10 lineas)
+    head -n 5 FICHERO
+        Muestra el inicio de un fichero (5 lineas)
+tail FICHERO
+    Muestra el fin de un fichero (10)
+    tail -n 5 FICHERO
+        Muestra el fin de un fichero (5)
+    tail -f FICHERO
+        Muestra el fin, esperando a que se actualice
+wc FICHERO
+    Word count. Muestra numero de lineas, palabras y caracteres
+    wc -c FICHERO
+        Muestra numero de lineas
+    wc -w FICHERO
+        Muestra numero de palabras
+    wc -c FICHERO
+        Muestra numero de bytes
+    wc -m FICHERO
+        Muestra numero de caracteres
+sort FICHERO
+    Muestra contenido ficheros ordenadamente
+    sort -r FICHERO
+        Muestra contenido de fichero al reves
+    sort -n FICHERO
+        Muestra contenido de fichero ordenado numericamente
+    sort -k NUM FICHERO
+        Ordenar por la columna número NUM
+    sort -t SEP FICHERO
+        Indicar separador de columnas
+    sort -f FICHERO
+        Ignora mayusculas/minusculas
+uniq FICHERO <Fichero_Salida>
+    No muestra lineas repetidas
+uniq -c FICHERO <Fichero_Salida>
+    Muestra numero de repeticiones
+uniq -d FICHERO <Fichero_Salida>
+    Muestra solo las repetidas
+uniq - u FICHERO <Fichero_Salida>
+    Muestra solo las no repetidas
+*** NO REEMPLAZAN EL ARCHIVO ORIGINAL
+expand -t NUM FICHERO Convierte tabuladores en NUM espacios
+unexpand -t NUM FICHERO Convierte  NUM espacios en tabuladores
+*** NO REEMPLAZAN EL ARCHIVO ORIGINAL
+fmt FICHERO
+    Visualiza un fichero para fijarlo a un ancho de caracteres (75)
+    fmt -w NUM FICHERO
+        Visualiza un fichero para fijarlo a un ancho de caracteres (NUM)
+pr FICHERO
+    Prepara fichero para impresión con cabecera FICHERO
+    pr -h CABEZA FICHERO
+        Prepara fichero para impresión con cabecera CABEZA
+cut 
+    Separa las columnas de un archivo (Debe usarse con opciones)
+    cut  -d DELI -f COLS FICHERO
+        Separa columnas por el caracter DELI 
+    cut -c RANGO FICHERO
+        Muestra los RANGO caracteres
+split 
+    Separa archivo en varios archivos (Debe usarse con opciones)
+    split -l LINEAS FICHERO PREFIX
+        Genera un fichero por cada LINEAS lineas y la pone en un archivo cuyo prefijo es PREFIX
+    split -b TAMAÑO ${BYTES} FICHERO PREFIX
+        Genera un fichero por cada TAMAÑO BYTES cuyo prefijo es PREFIX
+join FICHERO1 FICHERO2
+    Une dos ficheros por medio de un delimitador
+    join -t DELI FICHERO1 FICHERO2
+        Une dos ficheros por medio de un delimitador DELI
+    join -1 FICHERO1 FICHERO2
+        Une dos ficheros por medio de un delimitador (campo FICHERO1)
+    join -2 FICHERO1 FICHERO2
+        Une dos ficheros por medio de un delimitador (campo FICHERO2)
+paste
+    Une dos ficheros (Debe usarse con opciones)
+    paste -d DELI FICHERO1 FICHERO2
+        Une dos ficheros con delimitador DELI
+comm FICHERO1 FICHERO2
+    Compara archivos cuyo contenido esté dispuesto de forma ordenada.
+diff FICHERO1 FICHERO2
+    Genera un reporte de las diferencias entre archivos.
+patch FICHERO1 FICHERO2
+    Permite aplicar un archivo resultante de diff a un archivo original para transformarlo.
+grep PATRON FICHERO(S)
+    Busca PATRON en FICHERO(S)
+    grep -i PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (No case sensitive)
+    grep -c PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Cuenta numero coincidencias)
+    grep -e PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Especifica patrón)
+    grep -v PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Busqueda inversa)
+    grep -A NUM PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Muestra   NUM líneas posteriores)
+    grep -B NUM PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Muestra NUM líneas anteriores)
+    grep -r PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Recursivamente)
+    grep -H PATRON FICHERO(S)
+        Busca PATRON en FICHERO(S) (Incluye nombre fichero)
+egrep es como grep -E para expresiones regulares extendidas
+fgrep es como grep -F para ninguna  expresion regular
+tee FICHERO
+    Copia lo que recibe al archivo y lo deja en la stdout
+    tee -a FICHERO
+        Copia al final del FICHERO el texto recibido
+p7zip FILE
+    Crea.7z de un FILE
+rm FILE
+    Elimina FILE
+    rm -i FILE
+        Modo interactivo
+    rm -v FILE
+        Modo descriptivo
+    rm -r FILE
+        Recursivamente
+useradd USER
+    Añadir usuario
+    Principales opciones de useradd.
+        -b o --basedir define el directorio en el que se localizará el shell cuando un usuario inicia una sesión en una terminal. Por defecto es el directorio home del usuario.
+        -c o --comment define el texto que será agregado al apartado del nombre real del usuario.
+        -d o --homedir define la ruta del directorio home del usuario.
+        -g o --gid define el GID de grupo principal del usuario.
+        -G o --groups define una sucesion de grupos a los que pertenece el usuario.
+        -m o --create-home indica al sistema que cree el directorio home del usuario.
+        -p o --password define la contraseñá del usuario. Esto no sew recomienda, ya que dicha contraseña no será cifrada en el archivo /etc/shadow.
+        -r o --system indica si es un usuario del sistema.
+        -s o --shell define el shell del usuario.
+        -u o --uid define el UID del usuario.
+        -U o --user-group define el nombre del grupo principal del usuario.
+userdel USER
+    Eliminar usuario
+    Principales opciones de userdel.
+        -r o --remove eliminará al directorio home del usuario con todo y su contenido.
+        -f o ---force eliminará al usuario aún cuando esté registrado dentro del sistema.
+usermod USER
+    Modificar usuario existente
+    Principales opciones de usermod.
+        -c o --comment define el nuevo texto que será agregado al apartado del nombre real del usuario.
+        -d o --homedir define la ruta del nuevo directorio home del usuario.
+        -g o --gid define el GID de grupo principal del usuario.
+        -G o --groups define una sucesion de grupos a los que pertenece el usuario.
+        -l o --login define el nuevo nombre de usuario.
+        -m o --move-home indica al sistema que cambie el directorio home del usuario a la ruta especificada.
+        -p o --password define la contraseñá del usuario. Esto no sew recomienda, ya que dicha contraseña no será cifrada en el archivo /etc/shadow.
+        -r o --system indica si es un usuario del sistema.
+        -s o --shell define el shell del usuario.
+        -u o --uid define el UID del usuario.
+        -U o --user-group define el nombre del grupo principal del usuario.
+groupadd GRUPO
+    Añadir grupo
+    Principales opciones de groupadd.
+        -g o --gid define el GID del grupo.
+        -p o --password define la contraseñá del grupo.
+        -r o --system crea un grupo del sistema.
+groupdel GRUPO
+    Eliminar grupo
+groupmod GRUPO
+    Modificar grupo
+groups USER
+    Consultar grupos a los que pertenece un usuario
+id USER
+    Consultar uid de un usuario USER
+su USER
+    Change to USER
+who
+    Despliega los nombres y las terminales en las que se encuentran los del usuarios del sistema.
+w
+    Despliega los nombres y detalles de los usuarios del sistema.
+users
+    Despliega los nombres de los del usuarios del sistema.
+chown USER:GROUP FICHERO
+    Permite cambiar al propietario y grupo de un FICHERO
+chmod PERMISOS FICHERO
+    Permite modificar los permisos de acceso de un FICHERO
+    Permisos:
+        Número	Letra	Permiso
+        4	r	lectura
+        2	w	Escritura
+        1	x	Ejecución o exploración
+ps
+    Permite ver los procesos que estan ejecutandose
+    Algunas opciones del comando ps.
+        -a selecciona todos los procesos excepto los de inicio de la sesión y los asociados con la terminal.
+        -e selecciona todos los procesos.
+        -u <usuario> despliega el nombre del usuario dueño del proceso.
+        -j formato de trabajos.
+        -H Presenta los procesos de forma jerárquica.
+        -x Presenta aquellos procesos que no están ligados a una terminal necesariamente.
+        -o Permite formatear la salida de los procesos.
+        --sort Permite ordenar bajo cierto criterio el listado de procesos.
+sleep NUM
+    Permite poner al shell en pausa por un NUM segundos.
+jobs
+    Permite ver los trabajos asociados a la terminal
+fg
+    Permite llevar a primer plano el trabajo
+bg
+    Lleva a segundo plano el trabajo
+nohup
+    Permite crear un proceso sin una terminal asociada
+kill PROCESO
+    Envía una señal a un proceso mediante la siguiente sintaxis.
+    kill -s CODIGO PROCESO
+        Envia la señal de código CODIGO a PROCESO
+nice -PRIORIDAD PROCESO
+    Permite correr un comando asignándole una PRIORIDAD.
+renice PRIORIDAD PROCESO
+    Permite modificar la prioridad de un proceso en ejecución
+free
+    Despliega el estado actual de la memoria física y virtual del sistema.
+top
+    Es una aplicación que permite desplegar los procesos y recursos del sistema en tiempo real
+    mediante una ventana que se actualiza de forma constante.
+uptime
+    Indica el tiempo que el sistema ha estado funcionando desde su arranque.
+find NOMBRE
+    Busca en el directorio un fichero 
+*** Solo funciona con un pipeline
+tr SET1 SET2
+    Reemplaza SET1 con SET2
+    Ejemplo: cat hola.txt | tr ',' '\n'
+--------------------------------
+Para borrar varios archivos que son de una busqueda
+for file in $(COMANDO); do
+    rm -i $file;
+--------------------------------
+find DIRECTORIO EXPRESION
+    find -L DIRECTORIO EXPRESION
+        Seguir los links simbólicos de directorios
+    -P no realiza la búsqueda en los directorios con ligas simbólicas.
+    -maxdepth indica el máximo número de niveles de subdirectorios en los que se realizará la búsqueda.
+    -mindepth indica el número mínimo de niveles de subdirectorios en los que se realizará la búsqueda.
+    Criterios numéricos.
+        +n mayor que n.
+        -n menor que n.
+        n igual a n.
+    Pruebas.
+        Pruebas con respecto a tiempo.
+            -newer archivo
+            -amin n
+            -atime n
+            -anewer archivo
+            -cmin n
+            -ctime n
+            -cnewer archivo
+            -mmin n
+            -mtime n
+            -mnewer archivo
+        Pruebas con respecto a permisos.¶
+            -readable
+            -executable
+            -writable
+            -perm
+        Pruebas con respecto a tipo de archivo.
+            -links
+            -fstype
+        Pruebas con respecto a los propietarios.
+            -gid n
+            -group nombre
+            -nogroup n
+            pid n
+            -user nombre
+            -nouser n
+        Pruebas con respecto a nombres.
+            -name patrón
+            -iname patrón
+            -lname patrón
+            -ilname patrón
+        Pruebas por ruta.
+            -path patrón
+            -ipath patrón
+        Prueba por inode.
+            -inum n
+        Pruebas por regex.
+            -regex patrón
+            -iregex patrón
+        Prueba por igualdad.
+            -samefile archivo
+        Prueba por características.
+            -size n
+            -type tipo
+            -used n
+    Acciones.
+        -delete ADVERTENCIA: Colocar después de una prueba.
+        -exec <comando> {} \
+        -ok <comando> {} \
+        -execdir <comando> {} \
+        -okdir <comando> {} \
+        -print
+        -printf
+| xargs COMANDO
+    Es un filtro que usa como argumento para un comando cada elemento de un flujo de datos.
+export
+    Si no se añade ningún argumento regresa la lista de variables de entorno

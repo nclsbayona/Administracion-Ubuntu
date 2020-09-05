@@ -1,0 +1,5 @@
+Arriba y abajo para el historial
+Izquierda y derecha para modificar posición en el prompt actual
+Teclas Inicio o Home y Fin o End para navegar en el historial
+Tabulador para autocompletar
+Historial Av. pag y Re. Pag (Solo consola +Mayus)

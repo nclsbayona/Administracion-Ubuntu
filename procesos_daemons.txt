@@ -1,0 +1,38 @@
+Procesos.
+Los procesos son los diversos programas y binarios que se encuentran ejecutándose
+en un sistema en un momento deternimado.
+
+Estos procesos tienen las siguientes características.
+    Tienen un número identificador (PID).
+    Tiene dueños (UID y GID).
+    Ocupan recursos de cómputo (CPU).
+    Ocupan recursos de memoria.
+    Tienen prioridades por sobre otros procesos.
+    Pueden contener subprocesos.
+    Pueden tener diversos estados.
+    Pueden aceptar y procesar señales del sistema.
+    
+Estados.
+    1.  Running
+    2.  Interruptible
+    3.  Uninterruptible
+    4.  Stopped
+    5.  Zombie
+
+
+Señales a procesos.
+Los proceso pueden recibir distintos tipos de señales que modifican su comportamiento.
+Aún cuando existen 67 señales en GNU/Linux, las más utilizadas son:
+
+    9, la cual corresponde a SIGKILL, indicando a un proceso que debe de ser destruido.
+    Al recibir esta señal, el proceso es destruido de inmediato.
+    15, la cual corresponde a SIGTERM, indicando a un proceso que debe terminar.
+    Al recibir esta señal, el proceso realizará las operaciones necesarias para detenerse de forma ordenada.
+
+Prioridades.
+Todos los procesos cuentan con un nivel de prioridad en una escala unitaria de -20 a 19.
+Mientras más bajo sea el número, más prioritario es el proceso.
+
+Daemons.
+Son procesos que se ejecutan constantemente en trasfondo y no están ligados a una terminal.
+Comunmente son servicios del sistema. Por lo general su nombre terminan con "d".

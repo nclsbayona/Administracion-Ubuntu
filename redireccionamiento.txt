@@ -1,0 +1,20 @@
+stdin
+    Entrada estandar. Código 0
+stdout
+    Salida estandar. Codigo 1
+stderr
+    Error estandar. Codigo 2
+
+El caracter '>' permite redireccionar stdout (Reemplaza lo existente)
+El caracter '>' seguido de otro '>' permite redireccionar stdout (Añadiendo al final)
+El caracter '<' permite redireccionar stdin
+Para redireccionar stderr
+Se especifica antes del '>' el código (2)
+Para redireccionar stdout y stderr
+Se especifica antes del '> el caracter '&'
+
+El pipe |
+    Por su naturaleza, los filtros obtienen el flujo de datos mediante una entrada
+    y regresan el resultado por una salida, el pipe nos permite redireccionar tanto las entradas como las salidas de
+    un flujo.
+    

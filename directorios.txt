@@ -1,0 +1,75 @@
+Directorio '/'
+    Raiz de todo el sistema
+    
+Directorio '/home/'
+    Directorio que contiene el home de cada usuario
+
+Archivos de configuración de entorno.
+    Estos archivos se encuentran el el home del usuario y se jecutan automáticamente cada vez
+    que un usuario accede al sistema.
+         ~/.bashrc
+         ~/.profile
+         ~/.bash_logout
+         ~/.bash_history
+        
+Directorio '/bin/'
+    Directorio que contiene los principales comandos
+    
+Directorio '/sbin/'
+    Directorio que contiene las aplicaciones "SEGURAS"
+    
+Directorios '/lib/ y /lib64/'
+    Directorios que contienen las bibliotecas del sistema
+    
+Directorio '/lib/modules/'
+    Directorio que contiene las bibliotecas de los modulos del kernel de Linux
+    
+Directorio '/etc/'
+    Directorio que contiene directorios y archivos de configuracion del sistema y sus componentes
+
+Directorio '/etc/skel'
+    Directorio que contiene los archivos de configuración de entorno que seran usados por defecto
+    al crear un nuevo usuario
+    
+Directorio '/tmp/'
+    Directorio que contiene los archivos temporales del sistema y todos los usuarios
+    
+Directorio '/var/'
+    Directorio que contiene archivos que utilizan las aplicaciones y no pertenecen a un usuario convencional.
+
+Directorio '/var/log/'
+    Directorio que contiene las bitácoras del sistema.
+
+Directorio '/var/www/'
+ Directorio por defecto para la raíz de Apache.
+
+Directorio '/usr/'
+    Directorio que contiene directorios y archivos de acceso (ejecución) para todos los usuarios.
+
+Directorio '/usr/local/'
+    Directorio que  contiene recursos que no son de uso generalizado del sistema, sino que pueden ser usados
+    por grupos específicos de usuarios.
+
+Directorio '/boot/'
+    Directorio en el que se encuentra la imagen del kernel de Linux y la configuración de arranque del sistema.
+
+Directorio '/dev/'
+    Directorio que asocia a los dispositivos detectados y configurados por los controladores del kernel.
+
+Directorio '/proc/'
+    Directorio que mapea los procesos del sistema.
+
+Directorio '/sys/'
+    Directorio que utilizan las bibliotecas del kernel.
+
+Directorio '/run/'
+    Directorio que contiene archivos de ejecución de ciertos servicios y daemons.
+
+Directorios '/media/' y '/mnt/'
+    Directorios en los que se montan los diversos sistemas de archivos.
+
+Variables de entorno
+    Variable de entorno se define para todos los procesos de un usuario en una sesión
+
+Variable de entorno PATH
+    Esta variable contiene las rutas de búsqueda de comandos del usuario actual.

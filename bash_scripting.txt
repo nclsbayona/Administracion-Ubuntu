@@ -1,0 +1,90 @@
+Bash
+Sintaxis de una expresión.
+[<expresión>]
+((<expresión>))
+El signo $.¶
+<comando> $<expresión>
+Bash permite asignar variables a expresiones utilizando la siguiente sintaxis:
+<NOMBRE>=<expresión>
+Operadores.
+    Operadores de evaluación para enteros.
+        [ $<var 1> <operador> $<var 2> ]
+        -eq ¿es igual?
+        -ne ¿es distina?
+        -gt ¿es mayor que?
+        -lt ¿es menor que?
+        -ge ¿es mayor o igual?
+        -le ¿es menor o igual?
+        
+    Operadores para cadenas.
+        Operadores de comparación.
+            [ "$<var 1>" <operador> "S<var 2>" ]
+                = ¿Es igual?
+                !- ¿Es distinta?
+        Operadores de validación.
+            [ <operador> $<var> ]
+                -z ¿es una cadena vacía?
+                -n ¿es una cadena de tamaño n?
+                
+    Operadores booleanos.
+        [ <exp 1> <operador> <exp 2> ]
+        -o equivale a OR.
+        -a equivale a AND.
+        ! equivale a NOT
+        
+La estructura if...elif...else...fi.
+if <expresion 1>; then
+...
+elif <expresion 2>; then
+...
+elif <expresion 3>; then
+...
+elif <expresion n>; then
+...
+else
+...
+fi
+La estructura case...esac.
+case "$<VARIABLE>" in
+"<valor 1>" ) <codigo 1> ;;
+"<valor 2>" ) <codigo 2> ;;
+"<valor n>" ) <codigo n> ;;
+esac
+
+La estructura for...done
+for i in $( EXPRESION ); 
+do
+...
+done
+
+El comando seq.
+Este comando regresa una secuencia.
+seq <inicio> ,intervalo> <fin>
+
+while.
+while <expresión>; do
+<código>
+done
+
+until.
+until <expresión>; do
+<código>
+done
+
+Captura de argumentos.
+$@ es un arreglo que captura todos los argumentos.
+$# regresa el numero de argumentos que se ingresaron al script.
+$n regresa el argumento número n.
+
+
+Ingreso de datos con read.
+    read <opciones> <argumentos> <variable>
+        opciones de read.
+            -p permite deplegar un texto antes de esperar a que se ingresendatos.
+            -e espera que se ingrese el retorno de línea.
+
+export
+    Muestra variables de entorno
+    
+source
+    Hace una variable de entorno

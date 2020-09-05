@@ -1,0 +1,6 @@
+comando sub-comando opcion argumento 
+Ej: ls l     
+ls al     
+ls all    
+ls all l     
+ls l /etc      

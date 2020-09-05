@@ -1,0 +1,43 @@
+El archivo /etc/passwd.
+Es el archivo que tiene la relación de usuarios de sistema.
+
+<usuario>:<contraseña>:<uid>:<gid>:<nombre>:<homedir>:<shell>
+Donde:
+
+    <usuario> es el nombre del usuario.
+    <contraseña> es la contraseña del usuario, la cual por lo general se define en/etc/shadow
+    y es sustituida por x.
+    <uid> es el número identificador del usuario.
+    <gid> es el número identificador del grupo principal del usuario.
+    <nombre> es el nombre real del usuario.
+    <homedir> es la ruta del home del usuario.
+    <shell> es el shell que se ejecutará cuando el usuario acceda a una terminal.
+
+El archivo /etc/group.
+Este archivo guarda un listado de grupos y de los usuarios que pertenecen a ellos.
+
+<grupo>:<contraseña>:<gid>:<usuario 1>,<usuario 2>,...,<usuario n>
+Donde:
+
+    <grupo> es el nombre del grupo.
+    <contraseña> es la contraseñá del grupo, la cual se guarda comunmente en /etc/shadow
+    y en este archivo se coloca una x.
+    <gid> es el número identificador del grupo.
+    <usuario i> es el nombre de uno de los uusarios que pertenecen al grupo.
+    
+El archivo /etc/shadow.
+Este archivo guarda las contraseñas cifradas.
+
+<nombre>:<passwd>:<fecha>:<edad min>:<edad max>:<advertencia>:<inactividad>:<expiración>
+Donde:
+
+    <nombre> es el nombre del usuario o grupo.
+    <passwd> es la contraseña cifrada del usuario o grupo.
+    <fecha> es la estampa de tiempo de la última modificación de la contraseña.
+    <edad min> corresponde al tiempo mínimo de existencia de la contraseña,
+    normalmente es 0.
+    <edad max> corresponde al tiempo máximo de existencia de la contraseña,
+    normalmente es 99999.
+    <advertencia> corresponde al número de días de advertencia antes de que expire la contraseña.
+    <inactividad> es el número de días en el que una cuenta suspendida puede ser restablecida.
+    <expiración> es la estampa de tiempo de la fecha en la que expirará la contraseña.
