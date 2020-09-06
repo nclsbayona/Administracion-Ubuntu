@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 if [[ "${UID}" -eq 0 ]]
     then
         sudo apt-get update && sudo apt-get upgrade
