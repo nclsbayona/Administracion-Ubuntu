@@ -8,7 +8,7 @@ HM="Hola"
 let N3=$(("${N1}+${N2}"))
 if [[ Hm == HM ]];
     then
-        echo "${Hm} diferente a ${HM}"
+        echo "${Hm} igual a ${HM}"
     else
         echo "${Hm} diferente a ${HM}"
 fi
@@ -16,7 +16,7 @@ if [[ N1 -lt N2 ]];
     then
         echo "${N1} menor a ${N2}"
     else
-        echo "${N2} menor a ${N1}"
+        echo "${N2} mayor a ${N1}"
 fi
 if [[ !(NA+NB -eq 0) ]];
     then
