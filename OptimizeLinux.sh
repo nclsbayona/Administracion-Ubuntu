@@ -24,10 +24,6 @@ if [[ $UID = 0 ]]
 	    SYSCTLFOLDER=/etc/sysctl.conf
         SALIDAS=/dev/null
 	    FSTABFILE=/etc/fstab
-        #Solo para probar
-	    GTKFOLDER=$USERD/Desktop/Pruebas/gtk.txt
-        SYSCTLFOLDER=$USERD/Desktop/Pruebas/sysctl.txt
-	    FSTABFILE=$USERD/Desktop/Pruebas/fstab.txt
         echo -e "gtk-menu-popup-delay = 0\ngtk-menu-popdown-delay = 0\ngtk-menu-bar-popup-delay = 0\ngtk-enable-animations = 0\ngtk-timeout-expand = 0\ngtk-timeout-initial = 0\ngtk-timeout-repeat = 0\ngtk-enable-event-sounds=1\ngtk-enable-input-feedback-sounds=1\ngtk-xft-antialias=1">$GTKFOLDER 
         echo -e "vm.swappiness=1\nvm.vfs_cache_pressure=50\nvm.dirty_writeback_centisecs=1500\nvm.dirty_expire_centisecs=4500\nvm.dirty_ratio=30\nvm.dirty_background_ratio=15" > $SYSCTLFOLDER
         sudo apt -qq update
