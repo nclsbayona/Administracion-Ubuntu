@@ -16,7 +16,7 @@ if [[ "${UID}" -eq 0 ]]
         sudo apt-get -y autoclean
         sudo apt-get check
         rm -rf ~/.cache/thumbnails/*
-	echo 1 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'
+	
     else
         echo "Root missing"
 fi
