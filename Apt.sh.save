@@ -1,19 +1,23 @@
 #!/bin/bash
 if [[ "${UID}" -eq 0 ]]
     then
-	printf '\n%s\n' 'Updating and upgrading'
+        echo "update && upgrade"
         sudo apt-get -y update
+        sudo apt -y update
         sudo apt-get upgrade -y
+        sudo apt upgrade -y
         #Check everything is ok, and do cleaning
-	printf '\n%s\n' 'Checking and cleaning'        
-        sudo apt-get check
+        echo "Cleaning..."
 	sudo apt-get purge --auto-remove
+        sudo apt-get -y autoremove
+        sudo apt -y autoremove
 	sudo apt-get -y autoremove --purge
         sudo apt-get -y clean
+        sudo apt -y clean
         sudo apt-get -y autoclean
-	printf '\n%s\n' 'Ram-cache and Swap'
+        sudo apt-get check
         rm -rf ~/.cache/thumbnails/*
-	echo 1 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
-	else
+	echo 1 > /proc/sys/vm/drop_caches && swapoff -a && swapon -aprintf '\n%s\n' 'Ram-cache and Swap Cleared'
+    else
         echo "Root missing"
 fi
