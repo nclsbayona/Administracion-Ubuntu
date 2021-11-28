@@ -1,2 +1,1 @@
-# Administracion-Linux-B-sica
- 
+# Administracion-Ubuntu
