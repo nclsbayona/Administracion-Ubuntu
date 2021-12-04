@@ -1,2 +1,2 @@
 echo -e "Remove telemetry things...\n" && sudo apt purge ubuntu-report popularity-contest apport whoopsie apport-symptoms && sudo apt-mark hold ubuntu-report popularity-contest apport whoopsie apport-symptoms && echo -e "\nRemove snap stuff...\n" && snap list && echo -e "snap remove <package>; service snapd stop; sudo umount /snap/snapd/XXXXX; sudo apt purge snapd && sudo rm -rf ~/snap /snap /var/snap /var/lib/snapd"
-echo -e "Add flatpak...\n" && sudo add-apt-repository ppa:alexlarsson/flatpak && sudo apt update && sudo apt upgrade -y && sudo apt install flatpak
+
